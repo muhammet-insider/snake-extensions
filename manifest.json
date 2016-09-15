@@ -1,0 +1,22 @@
+{
+  "manifest_version":2,
+  "name":"snake time",
+  "version":"0.1",
+  "browser_action":{
+    "default_title":"snake time",
+    "default_icon":"snake-64.png"
+  },
+  "content_scripts":[
+    {
+      "matches":["http://localhost/*","*://www.gittigidiyor.com/*","*://www.gittigidiyor.com/kayit-ol"],
+      "js":["jquery31.js","snake.js"]
+    }
+  ],
+  "icons":{
+    "16":"snake-16.png",
+    "32":"snake-32.png",
+    "64":"snake-64.png",
+    "128":"snake-128.png"
+  },
+  "permissions":["tabs"]
+}
