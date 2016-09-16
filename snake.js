@@ -57,7 +57,12 @@ $(document).ready(function () {
         };
 
         var clearGameData=function () {
-            localStorage.clear();
+            localStorage.removeItem('positionList');
+            localStorage.removeItem('direction');
+            localStorage.removeItem('_status');
+            localStorage.removeItem('keyDownStatus');
+            localStorage.removeItem('snakeScore');
+
         };
 
         var _SPACE = 32;
@@ -77,7 +82,7 @@ $(document).ready(function () {
         var step=1;
         var stepScore=1;
         var stepFeed=1;
-        var keyDownStatus= localStorage.getItem('keyDownStatus') || true;
+        var keyDownStatus= /*localStorage.getItem('keyDownStatus') ||*/ true;
         jQuery(document).keydown(function (e) {
             if (jQuery.inArray(e.keyCode, [32, 37, 38, 39, 40]) == -1) return;
             if (e.keyCode == _SPACE && keyDownStatus==true) {
