@@ -53,7 +53,7 @@ $(document).ready(function () {
             localStorage.setItem('direction', JSON.stringify(direction));
             localStorage.setItem('_status',_status);
             localStorage.setItem('keyDownStatus',keyDownStatus);
-            localStorage.setItem('snakeScore',snakeScore);
+            localStorage.setItem('snakeScore',getScore());
         };
 
         var clearGameData=function () {
@@ -192,6 +192,7 @@ $(document).ready(function () {
                     if(elemControl($('.snakeBody:first'),$('.feedForSnake'))){
                         jQuery('.feedForSnake').css('display','none').remove();
                         jQuery('body').append(snakeBody.clone().css(positionList[snakeBody.size+1] || {}));
+
                         setScore(2);
                     }
                 }else feedTimer();
