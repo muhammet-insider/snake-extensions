@@ -30,7 +30,7 @@ $(document).ready(function () {
                 position.top && ((position.top > jQuery(window).height() && (position.top = 0)) || (position.top < 0 && (position.top = jQuery(window).height())));
                 position.left && ((position.left > jQuery(window).width() && (position.left = 0)) || (position.left < 0 && (position.left = jQuery(window).width())));
 
-                return position;
+                return position
             }
             else {
                 $('.statusBoard').text('Oyun : Bitti!');
