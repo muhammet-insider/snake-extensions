@@ -148,7 +148,7 @@ $(document).ready(function () {
             var x2 = $div2.offset().left;
             var y2 = $div2.offset().top;
             var h2 = $div2.outerHeight(true);
-            var w2 = $div2.outerWidth(true);
+            var w2 = $div2.outerWidth(true)
             var b2 = y2 + h2;
             var r2 = x2 + w2;
             if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
